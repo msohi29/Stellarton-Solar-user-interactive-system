@@ -247,6 +247,8 @@ void print_sale(FILE* salefd, FILE* cfd, FILE* pfd, unsigned int id)
 		#ifdef TARGET_OS_MAC
 			system("clear");
 		#endif
+	#elif __unix__
+		system("clear");
 	#endif
 	//SALE newsale;
 	HEADER_SALE hrec;

@@ -22,6 +22,7 @@ int main(int argc, char* argv[])
 	Enter_Date();			//Function to get the current date from the user	
 	Reminder_Date(newdate); //Function to calculate the reminder date based on the current date entered by the user
 	getchar();
+	
 	#ifdef _WIN64
 		system("cls");			//Clears the prompts from the enter_date function
 
@@ -31,6 +32,8 @@ int main(int argc, char* argv[])
 		#ifdef TARGET_OS_MAC
 			system("clear");
 		#endif
+	#elif __unix__
+		system("clear");
 	#endif
 
 	int options = -1;		//Local variable used for storing user selection of operation
