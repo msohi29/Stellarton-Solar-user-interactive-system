@@ -28,7 +28,7 @@ void Reminder_Date(DATE y) {
 	Reminder.month = y.month;
 	Reminder.year = y.year;
 	if (Reminder.day <= years[x][y.month - 1]) { //Normal addition without the addition of a month
-		printf("Payment reminder will be sent on >%d/%d/%d", Reminder.day, Reminder.month, Reminder.year);
+		printf("Payment reminder will be sent on >%d/%d/%d\n", Reminder.day, Reminder.month, Reminder.year);
 	}
 	else { //increment month by 1
 		Reminder.day = Reminder.day - years[x][y.month - 1];
