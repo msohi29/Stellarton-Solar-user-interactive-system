@@ -22,7 +22,7 @@ int open_rel_sale(FILE** file)
 	  -The file is opened in "r+" mode meaning that the file must exist and is opened for read and write
 	*/
 	printf("Enter Sales file name: ");
-	gets(fname);
+	fgets(fname, fname_len, stdin);
 
 	//_set_fmode(_O_BINARY);   //Read and write the file in binary
 

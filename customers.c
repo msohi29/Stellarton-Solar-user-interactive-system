@@ -33,7 +33,7 @@ int open_rel_c(FILE** file)
 
 	char fname[fname_len];
 	printf("Enter Customers database file name: ");
-	gets(fname);
+	fgets(fname, fname_len, stdin);
 
 	//_set_fmode(_O_BINARY);   //Read and write the file in binary
 
@@ -120,7 +120,7 @@ void add_customers(FILE* cfd)
 	while (i < MAX_FIELDS_CUST)
 	{
 		printf("%s", adding_prompts_customers[i]); //prints the prompts for add customers
-		gets(input);							   //gets the input from user
+		fgets(input, INPUT_LEN, stdin);							   //gets the input from user
 		STRCPY_C(input, i);						   //This is macro, it expands into a strncpy
 		i++;									   //Traverse the table
 	}
@@ -239,7 +239,7 @@ void update_customer(FILE* cfd)
 			getchar();
 			if (option < 7) { // if a field is updated the new fields of customers are printed
 				printf("%s:", updating_prompts_customers[option]); //prompt user to update selected option
-				gets(input); //read change from user
+				fgets(input, INPUT_LEN, stdin); //read change from user
 				STRCPY_C(input, option); // update customer field in buffer record
 				fseek(cfd, (cid - START + 1) * sizeof(CFREC), SEEK_SET); //point to wanted record
 				fwrite(&newcustomer, sizeof(CFREC), 1, cfd); // write new updated fields to desired record

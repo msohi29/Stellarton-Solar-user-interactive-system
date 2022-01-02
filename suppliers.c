@@ -16,7 +16,7 @@ int open_rel_s(FILE** file)
 	//file opened in r+ mode meaning that the file has to exist and is opened for reading and writing
 	char fname[fname_len];
 	printf("Enter suppliers file name: ");
-	gets(fname);
+	fgets(fname, fname_len, stdin);
 
 	//_set_fmode(_O_BINARY); //read and write file in binary
 //if name of a file that doesnt exist is passed the outcome in none-zero and a diagnostic is printed
@@ -99,7 +99,7 @@ void add_Supplier(FILE* spfd)
 	while (i < MAX_FIELDS_SUPPLIERS)
 	{
 		printf("%s", adding_prompts_supplier[i]);
-		gets(input);
+		fgets(input, INPUT_LEN, stdin);
 		//gets the input from user
 		STRCPY_S(input, i);
 		//This is macro, it expands into a strncpy
@@ -232,7 +232,7 @@ void update_supplier(FILE* sfd)
 			getchar();
 			if (option < 7) { // if a field is updated the new fields of suppliers are printed
 				printf("%s:", updating_prompts_suppliers[option]); //prompt user to update selected option
-				gets(input); //read change from user
+				fgets(input, INPUT_LEN, stdin); //read change from user
 				STRCPY_S(input, option); // update supplier field in buffer record
 				fseek(sfd, (sid - START + 1) * sizeof(CFREC), SEEK_SET); //point to wanted record
 				fwrite(&newsupplier, sizeof(CFREC), 1, sfd); // write new updated fields to desired record

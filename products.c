@@ -31,7 +31,7 @@ int open_rel_p(FILE** file)
 */
 	char fname[fname_len];
 	printf("Enter products file name: ");
-	gets(fname);
+	fgets(fname, fname_len, stdin);
 
 	//_set_fmode(_O_BINARY);
 	//if name of a file that doesn't exist is passed then the outcome is non-zero and prints a diagnostic.
@@ -169,7 +169,7 @@ void add_products(FILE* pfd)
 		//prints the prompts for add customers
 		printf("%s", adding_prompts_products[i]);
 		//gets the input from user
-		gets(input);
+		fgets(input, INPUT_LEN, stdin);
 		//This is macro, it expands into a strncpy
 		STRCPY_P(input, i);
 		//Traverse the table
@@ -332,7 +332,7 @@ void update_product(FILE* pfd)
 			case 3:
 				//special case: cost
 				printf("%s", updating_prompts_products[option]); //prompt user to update selected option
-				gets(input); //read change from user
+				fgets(input, INPUT_LEN, stdin); //read change from user
 				STRCPY_P(input, option); // update product field in buffer record
 				newproduct.unit_cost = dollar_to_int(cost);
 				break;
@@ -340,7 +340,7 @@ void update_product(FILE* pfd)
 			case 5:
 				//special case: Stock
 				printf("%s", updating_prompts_products[option]); //prompt user to update selected option
-				gets(input); //read change from user
+				fgets(input, INPUT_LEN, stdin); //read change from user
 				STRCPY_P(input, option); // update product field in buffer record
 				newproduct.stock = number_builder(stocks);
 				break;
@@ -348,7 +348,7 @@ void update_product(FILE* pfd)
 			case  6:
 				//special case: restock level
 				printf("%s", updating_prompts_products[option]); //prompt user to update selected option
-				gets(input); //read change from user
+				fgets(input, INPUT_LEN, stdin); //read change from user
 				STRCPY_P(input, option); // update product field in buffer record
 				newproduct.restock = number_builder(restock);
 				break;
@@ -359,7 +359,7 @@ void update_product(FILE* pfd)
 
 			default:
 				printf("%s", updating_prompts_products[option]); //prompt user to update selected option
-				gets(input); //read change from user
+				fgets(input, INPUT_LEN, stdin); //read change from user
 				STRCPY_P(input, option); // update product field in buffer record
 			}
 			
