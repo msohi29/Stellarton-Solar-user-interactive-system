@@ -13,7 +13,10 @@
 * 8.) delete_product
 * 9.) update_product
 */
-#define _CRT_SECURE_NO_WARNINGS //This allows many fucntions such as strtok and strcpy on visual studio without errors
+
+//This flag allows many fucntions such as strtok and strcpy on visual studio without errors
+#define _CRT_SECURE_NO_WARNINGS 
+
 #include "Task7.h"
 
 //Defining a global variable buffer local to products.c

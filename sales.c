@@ -8,6 +8,7 @@
 	3.) print_sale
 */
 
+//This flag allows many fucntions such as strtok and strcpy on visual studio without errors
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "Task7.h"
