@@ -64,8 +64,7 @@ typedef union product_file
 }PFREC;
 
 // Macro that expands into strncpy for products /
-#define STRCPY_P(x, y)\
-        strncpy(product_field_ptrs[y], x, product_field_size[y])
+#define STRCPY_P(x, y) strncpy(product_field_ptrs[y], x, product_field_size[y])
 
 // Decleration of array of pointer to fields of products /
 char* product_field_ptrs[MAX_FIELDS_PRODUCT];

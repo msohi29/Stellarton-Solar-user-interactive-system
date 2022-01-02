@@ -60,5 +60,4 @@ typedef union customer_file
 char* customer_fields_ptr[MAX_FIELDS_CUST];
 
 // Macro that expands into strncpy for customers /
-#define STRCPY_C(x, y)\
-        strncpy(customer_fields_ptr[y], x, customer_fields_size[y])
+#define STRCPY_C(x, y) strncpy(customer_fields_ptr[y], x, customer_fields_size[y])

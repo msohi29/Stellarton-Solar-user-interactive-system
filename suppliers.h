@@ -53,8 +53,7 @@ typedef union supplier_file
 }SFREC;
 
 // Macro that expands into strncpy for suppliers /
-#define STRCPY_S(x, y)\
-        strncpy(supplier_field_ptrs[y], x, suppliers_field_size[y])
+#define STRCPY_S(x, y) strncpy(supplier_field_ptrs[y], x, suppliers_field_size[y])
 
 // Decleration of array of pointer to fields of suppliers /
 char* supplier_field_ptrs[MAX_FIELDS_SUPPLIERS];

@@ -28,7 +28,7 @@ int open_rel_sale(FILE** file)
 
 
 	//if name of a file that doesn't exist is passed then the outcome is non-zero and prints a diagnostic.
-	if (*file = fopen(fname, "r+b") != 0)
+	if ((*file = fopen(fname, "r+b") )!= 0)
 	{
 		printf("Error opening file >%s<\n", fname);
 		getchar();

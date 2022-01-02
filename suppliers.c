@@ -20,7 +20,7 @@ int open_rel_s(FILE** file)
 
 	//_set_fmode(_O_BINARY); //read and write file in binary
 //if name of a file that doesnt exist is passed the outcome in none-zero and a diagnostic is printed
-	if (*file = fopen(fname, "r+b") != 0)
+	if ((*file = fopen(fname, "r+b") )!= 0)
 	{
 		printf("Error opening file >%s<\n", fname);
 		getchar();
