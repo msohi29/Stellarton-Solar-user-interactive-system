@@ -26,7 +26,7 @@ The contents of the database were provided by Dr. Larry Hughes for the purpose o
 
 To compile the program, use gcc and run the following command in the terminal of your working directory:
 
-gcc ./main.c ./backorder.c ./customers.c ./date.c ./products.c ./reorder.c ./sales.c ./suppliers.c -o myapp
+gcc ./main.c ./backorder.c ./customers.c ./date.c ./products.c ./reorder.c ./sales.c ./suppliers.c -o stellarton-system
 
 or
 
@@ -34,4 +34,4 @@ make
 
 then to run the program use:
 
-./myapp
+./stellarton-system
