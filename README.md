@@ -22,8 +22,7 @@ The format of the database files is predefined in order to use relative file acc
 The contents of the database were provided by Dr. Larry Hughes for the purpose of this project.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-**How to Run**
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# **How to Run**
 
 To compile the program, use gcc and run the following command in the terminal of your working directory:
 
