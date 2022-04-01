@@ -83,7 +83,6 @@ int number_builder(char* cptr)
 	/*
 	* This function takes the string given to it and converts it into an integer
 	*/
-	int i = 0;
 	int num = 0;
 
 	while (ISDIGIT(*cptr))
@@ -102,7 +101,6 @@ int number_builder(char* cptr)
 int dollar_to_int(char* cptr)
 {
 	// This function takes in a string of dollars then changes it to a decimal integer
-	int decimal_count;
 	int num;
 	int decimal_flag = FALSE;
 

@@ -46,7 +46,6 @@ void Reminder_Date(DATE y) {
 int Check_Date(unsigned int year, unsigned int month, unsigned int day) {
 	//This function checks the validity of the date entered from Enter_Date, 
 	//returing a true if an error is cought and false if there are no issues with the date
-	int date;
 	int x;
 
 	x = LYEAR(year);

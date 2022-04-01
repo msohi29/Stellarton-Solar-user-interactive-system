@@ -24,14 +24,10 @@ The contents of the database were provided by Dr. Larry Hughes for the purpose o
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # **How to Run**
 
-To compile the program, use gcc and run the following command in the terminal of your working directory:
-
-gcc ./main.c ./backorder.c ./customers.c ./date.c ./products.c ./reorder.c ./sales.c ./suppliers.c -o stellarton-system
-
-or
+To compile the program, the Makefile uses gcc and if the compiler needs to be changed open Makefile and replace CC= gcc with the desired compiler. To build the executible simply run:
 
 make
 
-then to run the program use:
+command in the terminal. Then to run the program use:
 
 ./stellarton-system
