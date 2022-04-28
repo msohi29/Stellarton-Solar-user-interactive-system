@@ -76,7 +76,7 @@ void fill_back_order(FILE* cfd, FILE* pfd, FILE* bfd)
 	fread(&hrec_b, sizeof(HEADER_B), 1, bfd);
 
 	//stores the available_index into a local variable
-	int max = hrec_b.available_index;
+	//int max = hrec_b.available_index;
 
 	int bid = 0;
 	int quantity_recieved = 0;

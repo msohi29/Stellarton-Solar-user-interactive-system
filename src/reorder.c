@@ -85,4 +85,6 @@ int find_reorders(FILE* pfd, FILE*sfd)
 		}
 		i++;
 	}
+
+	return 0;
 }

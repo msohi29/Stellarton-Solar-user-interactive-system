@@ -38,6 +38,8 @@ int open_rel_sale(FILE** file)
 
 	//prints a disgnostic of sucessful open.
 	printf("Openned file >%s<\n", fname);
+	
+	return 0;
 }
 
 int make_sale(FILE* salefd, FILE* pfd, FILE* cfd)

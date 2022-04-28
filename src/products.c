@@ -46,6 +46,7 @@ int open_rel_p(FILE** file)
 	}
 	//prints a disgnostic of sucessful open.
 	printf("Openned file >%s<\n", fname);
+	return 0;
 }
 
 //This initializes the array of sizes of the fields of products at compile time.

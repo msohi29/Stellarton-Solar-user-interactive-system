@@ -48,6 +48,7 @@ int open_rel_c(FILE** file)
 
 	//prints a disgnostic of sucessful open.
 	printf("Openned file >%s<\n", fname);
+	return 0;
 }
 
 void initalize_customer_fields_ptr(CUSTOMER* cust_field_adr)

@@ -30,4 +30,10 @@ make
 
 command in the terminal. Then to run the program use:
 
-./stellarton-system
+./bin/stellarton-system
+
+To remove all the files created by make use:
+  
+  o For UNIX: make clean
+  
+  o For Windows: make wclean

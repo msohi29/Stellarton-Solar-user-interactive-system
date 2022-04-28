@@ -31,6 +31,8 @@ int open_rel_s(FILE** file)
 	}
 	//printing diagnostic of successful open
 	printf("Openned file >%s<\n", fname);
+
+	return 0;
 }
 
 

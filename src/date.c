@@ -63,6 +63,8 @@ int Check_Date(unsigned int year, unsigned int month, unsigned int day) {
 			years[x][month - 1]);
 		return 1;
 	}
+
+	return 0;
 }
 
 unsigned month_base[2][12] = {

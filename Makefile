@@ -1,17 +1,29 @@
-target := stellarton-system
-objs := main.o backorder.o customers.o date.o products.o reorder.o sales.o suppliers.o
+SRC = src
+OBJ = obj
+BINDIR = bin
+
+BIN = $(BINDIR)/stellarton-system
+
+SRCS = $(wildcard $(SRC)/*.c)
+OBJS = $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SRCS))
 
 CC = gcc
-CFLAGS = -c -Wall
+CFLAGS = -g -Wall
 
-all: $(target)
+all: $(BIN)
 
-stellarton-system: $(objs)
-	$(CC) $^ -O2 -o $@
+release: CFLAGS = -Wall -O2 -DNDEBG
+release: clean
+release: $(BIN)
 
-%.o: %.c
-	$(CC) $(CFLAGS) $<
+$(BIN): $(OBJS)
+	$(CC) $^ -o $@
+
+$(OBJ)/%.o: $(SRC)/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+wclean:
+	del /Q /S .\$(BINDIR)\*.exe .\$(OBJ)\*.o *.txt 
 
 clean:
-	$(RM) *.o
-	$(RM) stellarton-system
+	$(RM) $(BIN) $(OBJS) *.txt
