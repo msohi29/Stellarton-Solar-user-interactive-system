@@ -26,7 +26,7 @@ The contents of the database were provided by Dr. Larry Hughes for the purpose o
 
 To compile the program, the Makefile uses gcc and if the compiler needs to be changed open Makefile and replace CC= gcc with the desired compiler. To build the executible simply run:
 
-make
+make release
 
 command in the terminal. Then to run the program use:
 
